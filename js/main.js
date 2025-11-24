@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cardSpace = card.getAttribute('data-space');
                     if (cardSpace === spaceName) {
                         const clonedCard = card.cloneNode(true);
+                        // Remove markers so handlers can be re-attached on clones
+                        clonedCard.removeAttribute('data-events-attached');
+                        clonedCard.querySelectorAll('.card').forEach(innerCard => {
+                            innerCard.removeAttribute('data-events-attached');
+                        });
                         clonedCard.classList.add('stagger-item');
                         spaceCardsGrid.appendChild(clonedCard);
                         hasCards = true;
@@ -320,8 +325,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if this card has an external link
         const externalLink = card.getAttribute('data-external-link');
         if (externalLink) {
-            // Open the external link in a new tab
-            window.open(externalLink, '_blank');
+            // Open the external link in a new tab with a hardened window.opener
+            const newTab = window.open(externalLink, '_blank', 'noopener,noreferrer');
+            if (newTab) {
+                newTab.opener = null;
+            }
         } else {
             // Open modal as usual
             openModal(card);
