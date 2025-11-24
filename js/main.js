@@ -238,9 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalContent = document.getElementById('modalContent');
     const modalClose = document.getElementById('modalClose');
     const modalBackdrop = modal.querySelector('.modal-backdrop');
+    let lastFocusedElement;
 
     // Function to open modal with card content
     function openModal(cardElement) {
+        lastFocusedElement = document.activeElement;
         const videoId = cardElement.getAttribute('data-video-id');
 
         if (videoId) {
@@ -263,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (modalProjectContent) {
                 // Project card - show the expanded content
-                // We need to get the content INSIDE the modal-project-content div
                 const projectView = modalProjectContent.querySelector('.project-modal-view');
 
                 if (projectView) {
@@ -282,6 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show modal with animation
         modal.classList.add('active');
         document.body.classList.add('modal-open');
+
+        // Accessibility: Focus management
+        // Wait for transition to finish or focus immediately if preferred
+        setTimeout(() => {
+            modalClose.focus();
+        }, 100);
     }
 
     // Function to close modal
@@ -292,33 +299,56 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear content after animation
         setTimeout(() => {
             modalContent.innerHTML = '';
+            // Restore focus
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+            }
         }, 300);
     }
 
-    // Function to attach click handlers to cards (for both original and cloned cards)
+    // Named function for card click handling
+    function handleCardClick(e) {
+        // Don't expand if clicking on interactive elements
+        if (e.target.tagName === 'A' ||
+            e.target.tagName === 'INPUT' ||
+            e.target.closest('.play-btn')) {
+            return;
+        }
+
+        const card = e.currentTarget;
+
+        // Check if this card has an external link
+        const externalLink = card.getAttribute('data-external-link');
+        if (externalLink) {
+            // Open the external link in a new tab
+            window.open(externalLink, '_blank');
+        } else {
+            // Open modal as usual
+            openModal(card);
+        }
+    }
+
+    // Function to attach click handlers to cards (Non-destructive)
     function attachCardClickHandlers() {
         document.querySelectorAll('.card').forEach(card => {
-            // Remove any existing click handler to avoid duplicates
-            const newCard = card.cloneNode(true);
-            card.parentNode.replaceChild(newCard, card);
+            // Check if handler is already attached
+            if (card.getAttribute('data-events-attached') === 'true') {
+                return;
+            }
 
-            newCard.style.cursor = 'pointer';
-            newCard.addEventListener('click', (e) => {
-                // Don't expand if clicking on interactive elements
-                if (e.target.tagName === 'A' ||
-                    e.target.tagName === 'INPUT' ||
-                    e.target.closest('.play-btn')) {
-                    return;
-                }
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', handleCardClick);
 
-                // Check if this card has an external link
-                const externalLink = newCard.getAttribute('data-external-link');
-                if (externalLink) {
-                    // Open the external link in a new tab
-                    window.open(externalLink, '_blank');
-                } else {
-                    // Open modal as usual
-                    openModal(newCard);
+            // Mark as attached
+            card.setAttribute('data-events-attached', 'true');
+
+            // Accessibility: Add keyboard support for opening cards
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('role', 'button');
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleCardClick(e);
                 }
             });
         });
@@ -331,10 +361,31 @@ document.addEventListener('DOMContentLoaded', () => {
     modalClose.addEventListener('click', closeModal);
     modalBackdrop.addEventListener('click', closeModal);
 
-    // Close on Escape key
+    // Close on Escape key & Focus Trap
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+        if (!modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
             closeModal();
+        }
+
+        // Focus Trap
+        if (e.key === 'Tab') {
+            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (e.shiftKey) { // Shift + Tab
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                }
+            } else { // Tab
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
         }
     });
 
