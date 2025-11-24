@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === VIEW SWITCHING (Everything / Spaces / Philosophy) ===
-    const navItems = document.querySelectorAll('.top-nav span');
+    const navItems = document.querySelectorAll('.top-nav [data-view]');
     const everythingView = document.getElementById('everything-view');
     const spacesView = document.getElementById('spaces-view');
     const spaceDetailView = document.getElementById('space-detail-view');
@@ -35,8 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const view = item.getAttribute('data-view');
 
             // Update active state
-            navItems.forEach(nav => nav.classList.remove('active'));
+            navItems.forEach(nav => {
+                nav.classList.remove('active');
+                nav.setAttribute('aria-pressed', 'false');
+            });
             item.classList.add('active');
+            item.setAttribute('aria-pressed', 'true');
 
             // Check if we're currently in folder detail view
             const isInFolderView = spaceDetailView.style.display === 'block';
@@ -92,6 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAnimating = false;
 
     folderCards.forEach(folder => {
+        // Keyboard support for folder tiles
+        folder.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                folder.click();
+            }
+        });
+
         folder.addEventListener('click', () => {
             if (isAnimating) return;
             isAnimating = true;

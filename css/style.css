@@ -195,30 +195,40 @@ header {
     align-items: center;
 }
 
-.top-nav span {
+.top-nav button {
+    background: none;
+    border: none;
     cursor: pointer;
     transition: 0.2s;
     padding-bottom: 3px;
     font-weight: 400;
+    color: inherit;
+    font-size: 1.1rem;
 }
 
-.top-nav span.active {
+.top-nav button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.top-nav button.active {
     color: #fff;
     border-bottom: 2px solid var(--accent);
 }
 
 /* Light mode active nav item */
-[data-theme="light"] .top-nav span.active {
+[data-theme="light"] .top-nav button.active {
     color: #1a1a1a;
     /* Dark text for light mode */
 }
 
-.top-nav span:hover {
+.top-nav button:hover {
     color: #fff;
 }
 
 /* Light mode nav hover */
-[data-theme="light"] .top-nav span:hover {
+[data-theme="light"] .top-nav button:hover {
     color: #1a1a1a;
     /* Dark text for light mode */
 }

@@ -4,13 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajat Tiwari | Digital Mind</title>
+    <title>Rajat Tiwari | My Mind</title>
+    <meta name="description"
+        content="Rajat Tiwari — engineer building AI products, systems, and experiences across code, design, and storytelling.">
+    <meta property="og:title" content="Rajat Tiwari | My Mind">
+    <meta property="og:description"
+        content="A visual-first personal site with projects, writings, music, and inspirations from Rajat Tiwari.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.therajattiwari.com/">
+    <meta property="og:image" content="images/IMG_7374.JPG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rajat Tiwari | My Mind">
+    <meta name="twitter:description"
+        content="AI products, multi-agent systems, and the creative mind of Rajat Tiwari — projects, writings, music, and moodboards.">
+    <meta name="twitter:image" content="images/IMG_7374.JPG">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
 
     <!-- KaTeX for math rendering -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
@@ -87,8 +105,8 @@
     <!-- TOP HEADER WITH NAVIGATION -->
     <header>
         <nav class="top-nav">
-            <span class="active" data-view="everything">Everything</span>
-            <span data-view="spaces">Spaces</span>
+            <button class="active" data-view="everything" aria-pressed="true">Everything</button>
+            <button data-view="spaces" aria-pressed="false">Spaces</button>
         </nav>
     </header>
 
@@ -110,7 +128,7 @@
         <div id="spaces-view" class="spaces-container" style="display: none;">
             <div class="spaces-grid">
 
-                <div class="folder-card" data-space="me">
+                <div class="folder-card" data-space="me" role="button" tabindex="0" aria-label="Open space: Me">
                     <div class="folder-image">
                         <img src="images/IMG_7374.JPG" alt="Me">
                     </div>
@@ -118,35 +136,39 @@
                 </div>
 
 
-                <div class="folder-card" data-space="creations">
+                <div class="folder-card" data-space="creations" role="button" tabindex="0"
+                    aria-label="Open space: Creations">
                     <div class="folder-image">
                         <img src="images/Gemini_Generated_Image_1lgekf1lgekf1lge.png" alt="Creations">
                     </div>
                     <h3 class="folder-title">Creations</h3>
                 </div>
 
-                <div class="folder-card" data-space="writings">
+                <div class="folder-card" data-space="writings" role="button" tabindex="0"
+                    aria-label="Open space: Writings">
                     <div class="folder-image">
                         <img src="images/1c087085-e18e-40dc-9f90-8956c00477e5.jpeg" alt="Writings">
                     </div>
                     <h3 class="folder-title">Writings</h3>
                 </div>
 
-                <div class="folder-card" data-space="curations">
+                <div class="folder-card" data-space="curations" role="button" tabindex="0"
+                    aria-label="Open space: Curations">
                     <div class="folder-image">
                         <img src="images/curation/85f226ada9cdc724c2b2d8f557899f94.jpg" alt="Curations">
                     </div>
                     <h3 class="folder-title">Curations</h3>
                 </div>
 
-                <div class="folder-card" data-space="music">
+                <div class="folder-card" data-space="music" role="button" tabindex="0" aria-label="Open space: Now Playing">
                     <div class="folder-image">
                         <img src="images/b3b129b50d8afd380983a0c9216f4079.jpg" alt="Now Playing">
                     </div>
                     <h3 class="folder-title">Now Playing</h3>
                 </div>
 
-                <div class="folder-card" data-space="inspirations">
+                <div class="folder-card" data-space="inspirations" role="button" tabindex="0"
+                    aria-label="Open space: Inspo">
                     <div class="folder-image">
                         <img src="images/b8b0eb986c194078281f12dc194043a4.jpg" alt="Inspo">
                     </div>
@@ -154,7 +176,8 @@
                 </div>
 
 
-                <div class="folder-card" data-space="rewatching">
+                <div class="folder-card" data-space="rewatching" role="button" tabindex="0"
+                    aria-label="Open space: Keep Rewatching">
                     <div class="folder-image">
                         <img src="images/2659cf77772e9553ba46026763cf97a9.jpg" alt="Keep Rewatching">
                     </div>
