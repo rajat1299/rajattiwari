@@ -1,0 +1,27 @@
+# Development/documentation files
+card-layout-structure.md
+content.md
+DESIGN_NOTES.md
+index.html.backup
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak

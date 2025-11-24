@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajat Tiwari | Digital Mind</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND & FX -->
+    <div class="soul-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="grain"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <div class="sidebar-icons">
+            <div class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+            </div>
+            <a href="mailto:rajattiwari1099@gmail.com" class="icon-btn" title="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rajat-tiwari-biz/" target="_blank" class="icon-btn" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+            <a href="https://github.com/rajat1299" target="_blank" class="icon-btn" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="resume/Rajat_AI_SDE.pdf" target="_blank" class="icon-btn" title="Resume">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <!-- TOP HEADER WITH NAVIGATION -->
+    <header>
+        <nav class="top-nav">
+            <span class="active" data-view="everything">Everything</span>
+            <span data-view="spaces">Spaces</span>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+
+        <!-- HERO / SEARCH STYLE -->
+        <div class="mind-header">
+            <button class="back-button-inline" id="backToSpaces" style="display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8l-4 4 4 4M16 12H8" />
+                </svg>
+            </button>
+            <h1 class="mind-title" id="header-title">With love, Rajat<span class="cursor-blink">_</span></h1>
+        </div>
+
+        <!-- SPACES VIEW (FOLDERS) - Hidden by default -->
+        <div id="spaces-view" class="spaces-container" style="display: none;">
+            <div class="spaces-grid">
+
+                <div class="folder-card" data-space="me">
+                    <div class="folder-image">
+                        <img src="images/IMG_7374.JPG" alt="Me">
+                    </div>
+                    <h3 class="folder-title">Me</h3>
+                </div>
+
+
+                <div class="folder-card" data-space="creations">
+                    <div class="folder-image">
+                        <img src="images/Gemini_Generated_Image_1lgekf1lgekf1lge.png" alt="Creations">
+                    </div>
+                    <h3 class="folder-title">Creations</h3>
+                </div>
+
+                <div class="folder-card" data-space="writings">
+                    <div class="folder-image">
+                        <img src="images/1c087085-e18e-40dc-9f90-8956c00477e5.jpeg" alt="Writings">
+                    </div>
+                    <h3 class="folder-title">Writings</h3>
+                </div>
+
+                <div class="folder-card" data-space="curations">
+                    <div class="folder-image">
+                        <img src="images/curation/85f226ada9cdc724c2b2d8f557899f94.jpg" alt="Curations">
+                    </div>
+                    <h3 class="folder-title">Curations</h3>
+                </div>
+
+                <div class="folder-card" data-space="music">
+                    <div class="folder-image">
+                        <img src="images/b3b129b50d8afd380983a0c9216f4079.jpg" alt="Now Playing">
+                    </div>
+                    <h3 class="folder-title">Now Playing</h3>
+                </div>
+
+                <div class="folder-card" data-space="inspirations">
+                    <div class="folder-image">
+                        <img src="images/b8b0eb986c194078281f12dc194043a4.jpg" alt="Inspo">
+                    </div>
+                    <h3 class="folder-title">Inspo</h3>
+                </div>
+
+
+                <div class="folder-card" data-space="rewatching">
+                    <div class="folder-image">
+                        <img src="images/2659cf77772e9553ba46026763cf97a9.jpg" alt="Keep Rewatching">
+                    </div>
+                    <h3 class="folder-title">Keep Rewatching</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SPACE DETAIL VIEW (When inside a folder) -->
+        <div id="space-detail-view" class="space-detail-container" style="display: none;">
+            <div class="masonry-grid" id="spaceCardsGrid">
+                <!-- Filtered cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- MASONRY GRID (Everything View) -->
+        <div id="everything-view" class="masonry-grid">
+
+            <!-- ABOUT CARD (Input Style) -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">About Me</span>
+                        <h2>Engineer, Creative, Tinkerer</h2>
+                        <p>
+                            My name is Rajat, and my fascination with building started when I was a kid and my brother
+                            showed me how to make simple games on our computer. I remember thinking "that’s, cool!" That
+                            moment of watching code become play opened a door I've been walking through ever since, from
+                            games to systems that genuinely help people.
+                        </p>
+                        <p>
+                            Today, I build AI products that do real work. At SRSWTI, I designed a production multi-agent
+                            framework that cut manual workloads by 55% for pilot clients in insurance and logistics.
+                            I've architected systems processing 200,000+ records daily, served AI orchestration APIs
+                            with 99.9% uptime, and built the kind of infrastructure that quietly runs in the background
+                            while people get their jobs done faster. The metrics look good on paper, but what actually
+                            matters to me is harder to measure: that moment when someone uses what I've built and feels
+                            like somebody actually gave a damn about their experience.
+                        </p>
+                        <p>
+                            I believe what we make stands testament to who we are. In a world obsessed with what's
+                            easily counted—speed, cost, scale—I stay focused on what isn't: delight, care, humanity. I'm
+                            not interested in breaking things for the sake of innovation; I'm interested in building
+                            something so much better that the old way naturally becomes obsolete.
+                        </p>
+                        <p>
+                            Outside of work, you'll find me on long walks, in the gym, or lost in music and photography.
+                            Books and architecture train my eye; conversations with interesting people shape my heart.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT: mémoire -->
+            <div class="grid-item" data-space="creations">
+                <div class="card card-project" data-external-link="https://github.com/rajat1299/ai-memory-engine">
+                    <!-- Grid View Content -->
+                    <div class="project-grid-view">
+                        <div class="project-img-container">
+                            <img src="images/30e45721ca62506aaaf6823f9af5f532.jpg" alt="mémoire Project"
+                                class="project-img">
+                        </div>
+                        <div class="project-text-container">
+                            <h3>mémoire</h3>
+                            <p class="project-description">mémoire enables any LLM
+                                to remember conversations, learn from
+                                interactions, and maintain context across sessions.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Modal content structure kept for consistency, though unused due to external link -->
+                    <div class="modal-project-content" style="display: none;">
+                        <div class="project-modal-view">
+                            <img src="images/30e45721ca62506aaaf6823f9af5f532.jpg" alt="mémoire Project"
+                                class="modal-project-bg">
+                            <div class="modal-project-overlay">
+                                <div class="modal-project-text">
+                                    <h2>mémoire</h2>
+                                    <p>mémoire enables any LLM to remember
+                                        conversations, learn from interactions, and
+                                        maintain context across sessions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INSPO: Dieter Rams -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/88d5401a9d72cf8a0ba8b91ee2796c5c.jpg" alt="Dieter Rams">
+                    <div class="video-title">Dieter Rams (German industrial designer)</div>
+                </div>
+            </div>
+
+            <!-- THOUGHTS ON PRODUCTS CARD -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">Thoughts on Products</span>
+
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Creations stand testament to who we are, our values and preoccupations.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Design should genuinely move humanity forward, not just meet price points.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Goal: enable and inspire people as builders in service of humanity.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Innovation is not about breaking things deliberately, only break as consequence of
+                                    creating something better.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Progress requires conviction, vision, and resolve; it's not inevitable.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>"Sincerely elevate the species"—millions engage with every detail, even cable
+                                    packaging.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Users should feel "somebody gave a damn about me" when using your product.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Creating products is expressing gratitude to the species.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Reframe quality vs speed: ask "how can we work efficiently to create breathtaking
+                                    quality?"</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Words used to frame problems shape how we think.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Unintended consequences are inevitable, hope they're pleasant, but responsibility
+                                    is mandatory.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Today's rate of change is too fast for society to create proper frameworks, unlike
+                                    the Industrial Revolution.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="AE005nZeF-A">
+                    <img src="https://img.youtube.com/vi/AE005nZeF-A/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/AE005nZeF-A/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Frank Ocean - Ivy</div>
+                </div>
+            </div>
+
+            <!-- WRITING CARD: Love and Habituation -->
+            <div class="grid-item" data-space="writings">
+                <div class="card card-philosophy card-input">
+                    <div class="card-content">
+                        <p>We habituate to everything except the things we love. Those stay forever new.</p>
+
+                        <p>Habit is a survival feature: once something is familiar and safe, your nervous system stops
+                            devoting full attention to it.</p>
+
+                        <p>Love is the exception because it's not just pleasure, it's ongoing relevance.</p>
+
+                        <p>When you really love something or someone, your brain tags it as: "this matters to my future.
+                            Keep watching."</p>
+
+                        <p>That's evolution's hack to keep you paying attention to your kids, your partner, your
+                            work—whatever actually matters. Everything else fades into the background.</p>
+
+                        <p>That's why people who truly love their craft become unstoppable. The work stays forever novel
+                            and interesting to them, while everyone else burns out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 9 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/af7a27b50143212cf38cdc54ba8499e2.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- THOUGHTS ON DESIGN CARD -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">Thoughts on Design</span>
+
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Simplicity is not minimalism, it's expressing essence, purpose, and role in
+                                    life.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Removing clutter without intention creates desiccated, soulless products.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Joy and humor are essential, not trivial; they've been missing in tech.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Your mental state while designing embodies the final work—anxiety creates anxious
+                                    products.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>The measurable trap: teams default to numbers (cost, speed, weight) because it's
+                                    inclusive.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Much of what designers contribute cannot be measured numerically.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Delightful, joyful products are equally important and get used more.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Utility and aesthetics are not opposed—if something doesn't work, it's
+                                    ugly.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>When choosing between options, the more humane one is always correct.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Users sense both care and carelessness—most companies patronize consumers.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>The inside matters: finish the back of drawers even if unseen, evolution is
+                                    measured by what we do when no one watches.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Every business has an obligation to care about design, not just consumer
+                                    electronics.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT: LA Shelter Platform -->
+            <div class="grid-item" data-space="creations">
+                <div class="card card-project" data-external-link="https://lafireshelter.org/">
+                    <!-- Grid View Content -->
+                    <div class="project-grid-view">
+                        <div class="project-img-container">
+                            <img src="images/projects/Screenshot 2025-11-22 at 12.16.46 AM.png"
+                                alt="LA Shelter Platform" class="project-img">
+                        </div>
+                        <div class="project-text-container">
+                            <h3>LA Shelter Platform</h3>
+                            <p class="project-description">A platform to connect LA
+                                residents affected by fires with
+                                temporary housing options.</p>
+                        </div>
+                    </div>
+
+                    <!-- Expanded Modal Content (Hidden in Grid) -->
+                    <div class="modal-project-content" style="display: none;">
+                        <div class="project-modal-view">
+                            <img src="images/projects/Screenshot 2025-11-22 at 12.16.46 AM.png"
+                                alt="LA Shelter Platform" class="modal-project-bg">
+                            <div class="modal-project-overlay">
+                                <div class="modal-project-text">
+                                    <h2>LA Shelter Platform</h2>
+                                    <p>A platform to connect LA residents affected
+                                        by fires with temporary housing
+                                        options.</p>
+                                    <!-- No GitHub link provided, but structure is ready if needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="sk3rpYkiHe8">
+                    <img src="https://img.youtube.com/vi/sk3rpYkiHe8/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/sk3rpYkiHe8/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Kanye West - Devil In A New Dress</div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="owxmFmg5SVk">
+                    <img src="https://img.youtube.com/vi/owxmFmg5SVk/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/owxmFmg5SVk/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Importance of making machines that are
+                        intuitive</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 10 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/afd2c0955c31b50a033ecfb0b0ee5916.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- EXPERIENCE CARD -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">Some Work</span>
+
+                        <h3 style="font-size: 1.1rem; margin-top: 24px; margin-bottom: 16px; font-weight: 500;">
+                            Currently</h3>
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>AI Software Engineer at SRSWTI building production multi-agent frameworks</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Building a personal OS on the side</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Graduated with Masters from University of Texas</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Running a moodboard Instagram page</span>
+                            </li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; margin-top: 32px; margin-bottom: 16px; font-weight: 500;">
+                            Previously</h3>
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Shipped an AI healthcare insurance app for Fidelity Investments</span>
+                            </li>
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Launched a platform for listing available shelters and resources to help those
+                                    displaced by the 2025 LA fires</span>
+                            </li>
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Software Engineer at WeafTech, worked on data platform, distributed systems and
+                                    machine learning projects with some very incredible engineers</span>
+                            </li>
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Interned at TUV Nord and was part of digital transformation initiative for their
+                                    industrial inspection division</span>
+                            </li>
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Studied Computer Science at Birla Institute of Technology and Science</span>
+                            </li>
+                            <li>
+                                <span class="bullet-dim">•</span>
+                                <span>Launched a bite-sized news app at 18</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRINCIPLES CARD -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">Principles</span>
+
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Get good at something you actually love, because only love beats
+                                    habituation.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Innovation serves progress, not disruption for its own sake.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Don't let old people screw you with student debt and fake prestige.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Exercise everyday.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Taste is a muscle.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Sweat the details.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>A lot of things matter a little, a few things matter a lot.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Don't repeat talking points — you will live a boring, unfree life.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Face your fears — the worst outcome is death and that's coming anyway.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Embarrassment is the dumbest fear — literally nobody cares.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>If motivations remain constant, you'll find ways to maintain care and
+                                    control.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Work is important, but if you have nothing you love outside work, your brain
+                                    becomes unbalanced and brittle.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Great outfits should be repeated.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>The cabinet maker principle: finish what no one sees—superficiality creates
+                                    nagging emptiness.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>All work should express love and gratitude to the species.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Act with urgency.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Do what you say you will.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Show up on time.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WRITING CARD: Total LLMification -->
+            <div class="grid-item" data-space="writings">
+                <div class="card card-philosophy card-input">
+                    <div class="card-content">
+                        <p>There is a beautiful, largely unexplored space opening up
+                            right now: the transformation of
+                            human knowledge, sensors, and actuators from a
+                            "Human-First" orientation to an "LLM-First"
+                            one.</p>
+
+                        <p>We are currently stuck in a primitive loop of
+                            "PDF-to-Text." We feed models raw streams of
+                            tokens and ask them to predict the next word
+                            top-to-bottom. Frankly, that’s lame. It’s the
+                            computational equivalent of passive reading.</p>
+
+                        <h3>Total LLMification</h3>
+                        <p>I’ve become obsessed with a better way: Total
+                            LLMification. Imagine a physics textbook. For a
+                            human, it’s a static PDF. But for an LLM, that same book
+                            should be a dynamic, functional
+                            environment. This isn't just OCR; it's a non-trivial,
+                            human-in-the-loop transformation that
+                            turns "reading" into "doing."</p>
+
+                        <h3>The Blueprint for LLM-Legible Knowledge</h3>
+                        <p>To truly upgrade an LLM's capability, we need to stop
+                            treating data as flat text and start
+                            treating it as structured training signals. Here is the
+                            topology for the perfect textbook
+                            transformation:</p>
+
+                        <ol style="margin-left: 20px; margin-bottom: 20px;">
+                            <li style="margin-bottom: 15px;">
+                                <strong>The Exposition (Context Layer)</strong>
+                                <p style="margin-top: 5px;">All narrative text is
+                                    extracted into clean Markdown. We
+                                    preserve the semantic structure—tables, lists,
+                                    bolding, and italics—and render all
+                                    math in LaTeX. Figures are extracted not just as
+                                    pixels, but as distinct image
+                                    entities tied to their context.</p>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Worked Problems (SFT Signal)</strong>
+                                <p style="margin-top: 5px;">Every "Example Problem"
+                                    in the book is converted into a
+                                    Supervised Fine-Tuning (SFT) example. We parse
+                                    references to previous figures or
+                                    tables so the model learns how to retrieve
+                                    context, not just hallucinate answers.
+                                </p>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Practice Problems (RL Environments)</strong>
+                                <p style="margin-top: 5px;">This is where it gets
+                                    interesting. We don't just feed the
+                                    model the practice problems; we extract them
+                                    into environment examples for
+                                    Reinforcement Learning (RL).</p>
+                                <ul style="margin-top: 5px; margin-left: 20px;">
+                                    <li>The problem becomes the state.</li>
+                                    <li>The answer key becomes the reward function.
+                                    </li>
+                                    <li>Additional context is structured as an
+                                        "Answer Key" for a potential LLM Judge to
+                                        score the reasoning.</li>
+                                </ul>
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>The Infinity Generator (Synthetic
+                                    Expansion)</strong>
+                                <p style="margin-top: 5px;">This is the killer app.
+                                    For every specific problem type, we
+                                    don't just teach the model the answer; we build
+                                    a Python-based generator that
+                                    creates infinite variations of that problem.</p>
+                                <p style="margin-top: 5px;">Take a simple question:
+                                    "What is the angle between the hour
+                                    and minute hands at 9:00 a.m.?"</p>
+                                <p style="margin-top: 5px;">Instead of learning that
+                                    one fact, we generalize the logic
+                                    into code. We can now generate a dataset of
+                                    millions of unique time-angle problems:
+                                </p>
+                                <ul style="margin-top: 5px; margin-left: 20px;">
+                                    <li>11:07 a.m. $\rightarrow$ 68°</li>
+                                    <li>4:14 a.m. $\rightarrow$ 43°</li>
+                                    <li>8:37 p.m. $\rightarrow$ 36°</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <h3>The LLM as a Student</h3>
+                        <p>By indexing this data into a RAG database or serving it
+                            via MCP (Model Context Protocol)
+                            servers, we fundamentally change the learning process.
+                        </p>
+                        <p>Just as a human student takes a high school physics
+                            course—reading the theory, watching the
+                            teacher solve examples, and then grinding through
+                            practice problems—an LLM can now "take"
+                            the course in the exact same way.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT: Flashrpc -->
+            <div class="grid-item" data-space="creations">
+                <div class="card card-project" data-external-link="https://github.com/rajat1299/Flashrpc">
+                    <!-- Grid View Content -->
+                    <div class="project-grid-view">
+                        <div class="project-img-container">
+                            <img src="images/projects/Gemini_Generated_Image_dsnpt4dsnpt4dsnp.png"
+                                alt="Flashrpc Project" class="project-img">
+                        </div>
+                        <div class="project-text-container">
+                            <h3>Flashrpc</h3>
+                            <p class="project-description">rpc over websockets made
+                                easy, robust, and production ready.
+                                a fast and durable bidirectional json rpc channel
+                                over websockets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Expanded Modal Content (Hidden in Grid) -->
+                    <div class="modal-project-content" style="display: none;">
+                        <div class="project-modal-view">
+                            <img src="images/projects/Gemini_Generated_Image_dsnpt4dsnpt4dsnp.png"
+                                alt="Flashrpc Project" class="modal-project-bg">
+                            <div class="modal-project-overlay">
+                                <div class="modal-project-text">
+                                    <h2>Flashrpc</h2>
+                                    <p>rpc over websockets made easy, robust, and
+                                        production ready. a fast and durable
+                                        bidirectional json rpc channel over
+                                        websockets. the easiest way to create a live
+                                        async channel between two nodes via python
+                                        (or other clients - for example, you
+                                        can run the websocket server in docker or
+                                        with Node.js, Ruby on Rails, or any
+                                        other platform, and they will communicate
+                                        statelessly with each other).</p>
+                                    <a href="https://github.com/rajat1299/Flashrpc" target="_blank"
+                                        class="project-link">View on
+                                        GitHub →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="UYXa2yBF5ms">
+                    <img src="https://img.youtube.com/vi/UYXa2yBF5ms/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/UYXa2yBF5ms/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Kanye West - I wonder</div>
+                </div>
+            </div>
+
+            <!-- INSPO: Michael Jordan -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/8e6a060ec4a0c53c1dbf645d48896bab.jpg" alt="Michael Jordan">
+                    <div class="video-title">Michael Jordan (former professional basketball player)</div>
+                </div>
+            </div>
+
+            <!-- INSPO: Kanye West -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/cd98923d9a12a4f19f54d33eb77faaeb.jpg" alt="Kanye West">
+                    <div class="video-title">Kanye West (artist)</div>
+                </div>
+            </div>
+
+            <!-- INSPO: Steve Jobs -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/e77a65a2221d9305557e7c589c7554e0.jpg" alt="Steve Jobs">
+                    <div class="video-title">Steve Jobs (artist)</div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube (Custom Thumbnail) -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="DR_yTQ0SYVA">
+                    <img src="images/5b9a7ebdd5919c9b6a0fbbd9118a84d5.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Kanye West - Zane Lowe Interview</div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="wiALRpD0Ztg">
+                    <img src="https://img.youtube.com/vi/wiALRpD0Ztg/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/wiALRpD0Ztg/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Kendrick Lamar - man at the garden
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 4 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/810c69b9-dd3c-4c72-b1ce-94041c7110e5.jpeg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 11 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/ce492a1fcfff81c52e64d3b8e48d3df8.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!--VIDEO CARD: YouTube (Custom Thumbnail) -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="t9HmOz8H0qI">
+                    <img src="images/f7766192272800f0d0f805682f56599b.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Steve Jobs at the 1983 International
+                        Design Conference in Aspen</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 3 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/61a9da80-4062-4551-9ccf-4c3fd1d1f575.jpeg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- INSPO: SpaceX Booster -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/175f88c894906e96dfbe91ac82e49c55.jpg" alt="SpaceX Booster">
+                    <div class="video-title">SpaceX booster</div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="G4hL5Om4IJ4">
+                    <img src="https://img.youtube.com/vi/G4hL5Om4IJ4/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/G4hL5Om4IJ4/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Jim Keller: The Future of Computing
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="jiHZqamCD8c">
+                    <img src="https://img.youtube.com/vi/jiHZqamCD8c/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/jiHZqamCD8c/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Steve Jobs - 2005 Stanford Commencement
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOW I WORK CARD -->
+            <div class="grid-item" data-space="me">
+                <div class="card card-input">
+                    <div class="card-content">
+                        <span class="card-label">How I Work</span>
+
+                        <ul class="experience-list">
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Small teams who trust, love, and care about each other are fundamental.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Caring means actually listening, most ideas die because people just want to
+                                    speak.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Opinions aren't ideas, greatest fear is missing amazing ideas from quiet
+                                    people.</span>
+                            </li>
+                            <li>
+                                <span class="bullet">•</span>
+                                <span>Make things for each other daily: creates vulnerability, gratitude, and shifts
+                                    focus to others.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 2 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/2cda304e-771a-46b2-98fa-22b71c67bc70.jpeg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- WRITING CARD: Information Topology -->
+            <div class="grid-item" data-space="writings">
+                <div class="card card-philosophy card-input">
+                    <div class="card-content">
+                        <p>What if I told you we've been looking at information all
+                            wrong? We are living inside a
+                            symphony of data, yet we've become fixated on the
+                            individual notes, completely missing the
+                            music itself. The question now is: what are we going to
+                            do about it? Can you actually see
+                            the wave functions without becoming part of the wave?
+                        </p>
+
+                        <h3>The Velocity of Knowing</h3>
+                        <p>"Boy logic" tells us that a wave function is just a
+                            property of a particle—something used to
+                            judge momentum, time, position, or spin. But information
+                            acts like a particle, too. It
+                            doesn't just exist; it carries context, nuance, and
+                            unexplored connections to other
+                            explanations.</p>
+
+                        <p>Think about velocity. In physics, it's speed with
+                            direction. In information theory, there is
+                            a "velocity of knowing." The information regarding how
+                            propulsion works carries a different
+                            velocity for a rocket scientist than it does for someone
+                            working at Joe & The Juice. Both
+                            might inherit the same raw data, but the speed and
+                            direction of their understanding are
+                            radically different.</p>
+
+                        <h3>The Failure of Brute Force</h3>
+                        <p>Walk into any hospital, research lab, or engineering
+                            floor, and you will see brilliant minds
+                            connecting invisible dots. They aren't doing this
+                            through rigid taxonomies or explicit
+                            links. A doctor doesn't need a database query to see a
+                            pattern in patient history; they do
+                            it through a natural weaving of understanding.</p>
+
+                        <p>Yet, here we are in 2025, still trying to brute-force
+                            these connections. We have trapped
+                            ourselves in a binary of bad options: either we throw
+                            millions of dollars at domain experts
+                            who cannot scale, or we throw billions at Large Language
+                            Models that miss the elegant
+                            simplicity of human intuition. We've built a world where
+                            true understanding comes with
+                            either a prohibitive price tag or a computational
+                            overhead that would make Moore's Law
+                            blush.</p>
+
+                        <h3>A Natural Topology</h3>
+                        <p>But what if there was another way? What if, instead of
+                            forcing connections through artificial
+                            means, we let information find its own topology? Think
+                            of it like water finding its natural
+                            path, or proteins folding into their perfect form.</p>
+
+                        <p>We need to embrace:</p>
+                        <ul>
+                            <li>The dance between explicit and implicit connections.
+                            </li>
+                            <li>The natural hierarchy of understanding.</li>
+                            <li>The deterministic patterns that emerge when we stop
+                                forcing and start observing.</li>
+                        </ul>
+
+                        <p>It sounds impossible, but graph theory and hierarchical
+                            determinism can reveal what has been
+                            hiding in plain sight.</p>
+
+                        <h3>The Math Behind the Magic</h3>
+                        <p>At its core, this approach recognizes three fundamental
+                            layers of information
+                            topology. We define the strength of the connection
+                            between any two nodes ($n$) at a layer
+                            using a weighted relationship:</p>
+
+                        <p>$$\omega_{ij}^{\prime}=\alpha S_{ij}+\beta E_{ij}+\gamma
+                            K_{ij}$$</p>
+
+                        <p>Where:</p>
+                        <ul>
+                            <li>$S_{ij}$ represents semantic similarity.</li>
+                            <li>$E_{ij}$ captures the entity overlap ratio.</li>
+                            <li>$\kappa_{ij}$ measures key phrase resonance.</li>
+                            <li>$\alpha$ and $\beta$ are layer-specific weights that
+                                adapt to the complexity of the
+                                content.</li>
+                        </ul>
+
+                        <p>The beauty emerges in how these layers interact. A node's
+                            effective state isn't static; it's
+                            a summation of its neighborhood and base state:</p>
+
+                        <p>$$\psi_{n}=\overline{\sum_{i\in k}}\sum_{j\in
+                            N_{i}\langle
+                            n\rangle}\omega_{n,j}^{i}\phi_{j}$$</p>
+
+                        <p>Consider a medical case study mentioning "patient
+                            response to treatment A." In our topology,
+                            this single node naturally belongs to the treatment
+                            methodology cluster (semantic), the
+                            patient outcomes group (entity relationship), and
+                            multiple temporal sequences (contextual)
+                            all at once.</p>
+
+                        <p>To measure this, we look at the Information Radius
+                            (IRad), a metric that helps us understand
+                            how information naturally clusters and flows without us
+                            forcing artificial boundaries.</p>
+
+                        <h3>From Static to Spectral</h3>
+                        <p>When we move beyond static connections, things get
+                            interesting. Because we can't standardize
+                            the "information velocity" for everyone (the engineer
+                            vs. the staff worker), we have to
+                            personalize the communities.</p>
+
+                        <p>Borrowing from concepts I learned regarding spectral
+                            filtering and spectral transformers (nod
+                            to E. Hazan and Ana Choromanska), we can map this flow:
+                        </p>
+
+                        <ul>
+                            <li><strong>Input Sequence:</strong> Start with data
+                                points $xt$ (words, sensor readings,
+                                control inputs).</li>
+                            <li><strong>Impulse Response:</strong> Compute how the
+                                system reacts over time.</li>
+                            <li><strong>Hankel Matrix:</strong> Use outer products
+                                of the impulse response to form a
+                                Hankel Matrix ($Z$), capturing the sequence
+                                dynamics.</li>
+                            <li><strong>Eigen Decomposition:</strong> Extract
+                                spectral filters from $Z$ to reveal the
+                                hidden structure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 8 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/af63a64039d2cdc2136c5475f491a95a.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="Qz3LK267YVI">
+                    <img src="https://img.youtube.com/vi/Qz3LK267YVI/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/Qz3LK267YVI/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Drake - Pound Cake / Paris Morton Music
+                        2</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 5 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/85f226ada9cdc724c2b2d8f557899f94.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- INSPO: Balloon Dog -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/4065d22b2a8afa97fd9c8069b0ded605.jpg" alt="Balloon Dog">
+                    <div class="video-title">Balloon dog by Jeff Koons</div>
+                </div>
+            </div>
+
+            <!-- INSPO: Virgil Abloh -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/b9af4e0c092231d8fc980b296e4d2bf9.jpg" alt="Virgil Abloh">
+                    <div class="video-title">Virgil Abloh (fashion designer)</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 6 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/90a9cd7a225be8661aa62dd073936152.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- INSPO: Rubik's Cube -->
+            <div class="grid-item" data-space="inspirations">
+                <div class="card card-visual">
+                    <img src="images/21fe12ab8a42ebf7be85a78b54fa8f7c.jpg" alt="Rubik's Cube">
+                    <div class="video-title">Rubik's cube</div>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="ivCY3Ec4iaU">
+                    <img src="https://img.youtube.com/vi/ivCY3Ec4iaU/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/ivCY3Ec4iaU/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Kanye West - Follow God</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 1 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/107465513d262eb7c77143fcc520b489.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 13 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/ded89f8d28bd927d3b6cbaf667519605.jpg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="rewatching">
+                <div class="card card-video" data-video-id="LCEmiRjPEtQ">
+                    <img src="https://img.youtube.com/vi/LCEmiRjPEtQ/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/LCEmiRjPEtQ/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Andrej Karpathy: Software Is Changing
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 12 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/d1bb5916-2ae8-4421-9316-667e594cd5fa.jpeg" alt="Curation">
+                </div>
+            </div>
+
+            <!-- VIDEO CARD: YouTube -->
+            <div class="grid-item" data-space="music">
+                <div class="card card-video" data-video-id="V23eW2KEIuU">
+                    <img src="https://img.youtube.com/vi/V23eW2KEIuU/maxresdefault.jpg" alt="Video Thumbnail"
+                        class="video-thumbnail"
+                        onerror="this.onerror=null; this.src='https://img.youtube.com/vi/V23eW2KEIuU/hqdefault.jpg'">
+                    <div class="play-button-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-title">Karan Aujla - Daytona</div>
+                </div>
+            </div>
+
+            <!-- CURATION IMAGE 7 -->
+            <div class="grid-item" data-space="curations">
+                <div class="card card-visual">
+                    <img src="images/curation/9c67d2a2-d74b-443d-b70a-e5aa0c4cc446.jpeg" alt="Curation">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL OVERLAY -->
+    <div class="modal-overlay" id="cardModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M15 9l-6 6M9 9l6 6" />
+                </svg>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Card content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Masonry & ImagesLoaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Initialize KaTeX auto-render -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ],
+                throwOnError: false
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
